@@ -41,7 +41,7 @@ The API should now be running at `http://localhost:5000`.
 | Method | Endpoint       | Description          |
 |--------|----------------|----------------------|
 | POST   | `api/login`       | Login User        |
-| GET    | `api/register`    | Register User     |
+| POST   | `api/register`    | Register User     |
 | GET    | `api/trains`      | Get all trains    |
 | GET    | `api/trains/:id`  | Get a train by ID |
 | POST   | `api/trains`      | Add a new train   |
