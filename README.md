@@ -4,16 +4,6 @@ A RESTful API built with **Express.js** and **MySQL** for managing train data, d
 
 ---
 
-## Prerequisites
-
-Make sure you have the following installed before proceeding:
-
-- [Node.js](https://nodejs.org/) (v14 or higher recommended)
-- [MySQL](https://www.mysql.com/) (v5.7 or higher)
-- [Git](https://git-scm.com/)
-
----
-
 ## Installation & Setup
 
 ### Step 1: Clone the Repository
