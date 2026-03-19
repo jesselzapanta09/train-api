@@ -36,18 +36,8 @@ npm install
 ```
 3. Import the provided SQL file(traindb.sql)
 
-### Step 4: Configure Environment Variables
 
-Create a `.env` file in the root directory and fill in your database credentials:
-```env
-DB_HOST=localhost
-DB_USER=your_mysql_username
-DB_PASSWORD=your_mysql_password
-DB_NAME=traindb
-PORT=3000
-```
-
-### Step 5: Start the Server
+### Step 4: Start the Server
 ```bash
 node server.js
 ```
