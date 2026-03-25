@@ -3,6 +3,19 @@ const router = express.Router();
 const db = require('../config/database');
 const authenticateToken = require('../middleware/auth');
 
+// GET /api/train - Get all trains
+router.get('/', authenticateToken, async (req, res) => {
+    try {
+        const [trains] = await db.query('SELECT * FROM trains ORDER BY id DESC');
+        res.status(200).json({
+            success: true, message: 'Trains retrieved successfully',
+            count: trains.length, data: trains
+        });
+    } catch (err) {
+        res.status(500).json({ success: false, message: 'Server error', error: err.message });
+    }
+});
+
 // POST /api/train - Create a new train
 router.post('/', authenticateToken, async (req, res) => {
     const { train_name, price, route } = req.body;
@@ -17,19 +30,6 @@ router.post('/', authenticateToken, async (req, res) => {
         res.status(201).json({
             success: true, message: 'Train created successfully',
             data: { id: result.insertId, train_name, price, route }
-        });
-    } catch (err) {
-        res.status(500).json({ success: false, message: 'Server error', error: err.message });
-    }
-});
-
-// GET /api/train - Get all trains
-router.get('/', authenticateToken, async (req, res) => {
-    try {
-        const [trains] = await db.query('SELECT * FROM trains ORDER BY created_at DESC');
-        res.status(200).json({
-            success: true, message: 'Trains retrieved successfully',
-            count: trains.length, data: trains
         });
     } catch (err) {
         res.status(500).json({ success: false, message: 'Server error', error: err.message });

@@ -1,6 +1,6 @@
-# MSIT 114 - Activity 16: ExpressJS Train API
+# MSIT 114 - Activity 17: ExpressJS API
 
-A RESTful API built with **Express.js** and **MySQL** for managing train data, developed as part of MSIT 114 coursework.
+This project is a simple **ExpressJS API** for managing train data, developed as part of MSIT 114 coursework.
 
 ---
 
@@ -24,19 +24,18 @@ npm install
 ```sql
    CREATE DATABASE traindb;
 ```
-3. Import the provided SQL file(traindb.sql)
+3. Import the provided SQL file(**traindb.sql**)
 
-
-### Step 4: Start the Server
+### Step 4: Run the Server
 ```bash
-node server.js
+npm run dev
 ```
 
 The API should now be running at `http://localhost:5000`.
 
 ---
 
-## API Endpoints
+# API Endpoints
 
 | Method | Endpoint       | Description          |
 |--------|----------------|----------------------|
@@ -51,4 +50,4 @@ The API should now be running at `http://localhost:5000`.
 
 ## Author
 
-**Jesse Zapanta** — MSIT 114
+**Jessel Zapanta** — MSIT 114
