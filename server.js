@@ -8,10 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 const authRoutes = require('./routes/auth');
-const trainRoutes = require('./routes/train');
+const trainRoutes = require('./routes/trains');
 
 app.use('/api', authRoutes);
-app.use('/api/train', trainRoutes);
+app.use('/api/trains', trainRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -21,12 +21,12 @@ app.get('/', (req, res) => {
         version: '1.0.0',
         endpoints: {
             auth: ['POST /api/register', 'POST /api/login', 'POST /api/logout'],
-            train: [
-                'POST   /api/train',
-                'GET    /api/train',
-                'GET    /api/train/:id',
-                'PUT    /api/train/:id',
-                'DELETE /api/train/:id'
+            trains: [
+                'POST   /api/trains',
+                'GET    /api/trains',
+                'GET    /api/trains/:id',
+                'PUT    /api/trains/:id',
+                'DELETE /api/trains/:id'
             ]
         }
     });
